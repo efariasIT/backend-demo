@@ -32,6 +32,15 @@ public class PersonModel implements Serializable {
 	public PersonModel() {
 	}
 
+	public PersonModel(Long id, String documento, String name, String genero, String tipo) {
+		super();
+		this.id = id;
+		this.documento = documento;
+		this.name = name;
+		this.genero = genero;
+		this.tipo = tipo;
+	}
+
 	public PersonModel(String documento, String name, String genero, String tipo) {
 		this.documento = documento;
 		this.name = name;

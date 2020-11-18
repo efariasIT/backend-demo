@@ -23,11 +23,22 @@ dependencies {
 	testImplementation('org.springframework.boot:spring-boot-starter-test') {
 		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
 	}
+	testCompile('org.junit.jupiter:junit-jupiter-api')
+    testRuntime('org.junit.jupiter:junit-jupiter-engine')
+    testCompile('org.junit.jupiter:junit-jupiter-params')
+    testCompile('org.junit.platform:junit-platform-launcher')
+    testCompile('org.junit.platform:junit-platform-runner')
 }
 
 tasks.withType(Test) {
 	scanForTestClasses = false
 	include "**/*Test.class"
+}
+
+compileJava.options.encoding = 'UTF-8'
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
 }
 
 test {
