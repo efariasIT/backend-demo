@@ -25,7 +25,7 @@ import com.example.postgres.springbootpostgresdocker.repository.PersonRespositor
 public class PersonService implements IPersonService {
 	
 	// Constantes
-	public static final String EXISTE_DOCUMENTO = "¡El numero de documento ya existe, por favor verifique!";
+	public static final String EXISTE_DOCUMENTO = "El numero de documento ya existe, por favor verifique.";
 
 	@Autowired
 	private PersonRespository personRespository;
